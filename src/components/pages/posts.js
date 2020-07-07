@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PostSummary from '../features/PostSummary/PostSummary';
 import axios from 'axios';
 
 class Posts extends Component {
@@ -16,10 +17,16 @@ class Posts extends Component {
             })
     }
 
+    postsList() {
+        return this.state.posts.map(currentpost => {
+            return <PostSummary post={currentpost} key={currentpost._id} />
+        })
+    }
+
     render() {
         return (
             <div>
-
+                { this.postsList() }
             </div>
         );
     }
