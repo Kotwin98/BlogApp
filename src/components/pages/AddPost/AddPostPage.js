@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../../styles/addPost.css';
+import '../../../styles/addPost.css';
 
-class AddPost extends Component {
+class AddPostPage extends Component {
     state = {
         title: '',
         author: '',
@@ -80,4 +80,4 @@ class AddPost extends Component {
     }
 };
 
-export default AddPost;
+export default AddPostPage;

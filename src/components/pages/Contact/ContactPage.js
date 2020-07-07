@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../styles/contact.css';
+import '../../../styles/contact.css';
 
-const contact = () => (
+const ContactPage = () => (
     <div className="contact-container">
         <h1 className="contact-title">Contact</h1>
         <p className="contact-par1">Contact me any time</p>
@@ -11,4 +11,4 @@ const contact = () => (
     </div>
 );
 
-export default contact;
+export default ContactPage;

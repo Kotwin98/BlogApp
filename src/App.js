@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/pages/navbar';
-import Home from './components/pages/home';
-import AddPost from './components/pages/addPost';
-import PostsPage from './components/pages/posts';
-import Contact from './components/pages/contact';
+import Home from './components/pages/Home/HomePage';
+import AddPost from './components/pages/AddPost/AddPostPage';
+import PostsPage from './components/pages/Posts/PostsPage';
+import Contact from './components/pages/Contact/ContactPage';
 import './App.css';
 
 function App() {
