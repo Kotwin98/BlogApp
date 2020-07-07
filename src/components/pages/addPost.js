@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../styles/addPost.css';
+import '../../styles/addPost.css';
 
 class AddPost extends Component {
     state = {
