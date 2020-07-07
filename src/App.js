@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/pages/navbar';
 import Home from './components/pages/home';
 import AddPost from './components/pages/addPost';
-import Posts from './components/pages/posts';
+import PostsPage from './components/pages/posts';
 import Contact from './components/pages/contact';
 import './App.css';
 
@@ -14,7 +14,7 @@ function App() {
       <br />
       <Route path="/" exact component={Home} />
       <Route path="/add-post" exact component={AddPost} />
-      <Route path="/posts" exact component={Posts} />
+      <Route path="/posts" exact component={PostsPage} />
       <Route path="/contact" exact component={Contact} />
     </Router>
   );
