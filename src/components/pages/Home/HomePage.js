@@ -1,8 +1,9 @@
 import React from 'react';
+import Posts from '../../features/Posts/Posts';
 
 const HomePage = () => (
     <div>
-        This is home page
+        <Posts />
     </div>
 );
 
