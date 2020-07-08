@@ -8,7 +8,6 @@ import AddPost from './components/pages/AddPost/AddPostPage';
 import PostsPage from './components/pages/Posts/PostsPage';
 import Contact from './components/pages/Contact/ContactPage';
 import NotFound from './components/pages/NotFound/NotFoundPage';
-import './App.css';
 
 class App extends Component {
   render() {
