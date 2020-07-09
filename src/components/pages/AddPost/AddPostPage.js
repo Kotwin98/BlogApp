@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../../../styles/addPost.css';
+import Editor from 'react-medium-editor';
+import 'medium-editor/dist/css/medium-editor.css';
+import 'medium-editor/dist/css/themes/default.css';
+import '../../../styles/AddPost.scss';
+
+import TextField from '../../common/TextField/TextField';
+import SectionTitle from '../../common/SectionTitle/SectionTitle';
+import Button from '../../common/Button/Button';
 
 class AddPostPage extends Component {
     state = {
@@ -21,9 +28,9 @@ class AddPostPage extends Component {
         });
     }
 
-    onChangeContent = (e) => {
+    onChangeContent = (text) => {
         this.setState({
-            content: e.target.value
+            content: text
         });
     }
 
@@ -48,32 +55,29 @@ class AddPostPage extends Component {
 
     render() {
         return (
-            <div className="addPost-container"> 
+            <div> 
             <h1 className="addPost-title">Add post</h1>
-            <form onSubmit={this.onSubmit} className="addPost-form">
-                <input 
-                    type="text"
+            <form onSubmit={this.onSubmit}>
+                <TextField 
                     value={this.state.title}
                     onChange={this.onChangeTitle} 
                     label="Title" 
-                    placeholder="Title" 
-                    className="addPost-input addPost-title-input" 
+                    name="title" 
                 />
-                <input 
-                    type="text"
+                <TextField
                     value={this.state.author}
                     onChange={this.onChangeAuthor} 
                     label="Author" 
-                    placeholder="Author" 
-                    className="addPost-input" 
+                    name="author" 
                 />
-                <p className="addPost-par">Write your post content</p>
-                <input 
-                    type="text" 
-                    value={this.state.content}
+                <SectionTitle>Edit post content</SectionTitle>
+                <Editor 
+                    className="content-editor"
+                    text={this.state.content}
                     onChange={this.onChangeContent} 
-                    className="addPost-content-input" />
-                <button className="addPost-button">Add post</button>
+                    options={{ placeholder: false, toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor', 'h2', 'h3'] } }}
+                />
+                <Button variant="primary">Add post</Button>
             </form>
             </div>
         );
