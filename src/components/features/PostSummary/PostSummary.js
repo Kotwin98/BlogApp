@@ -1,11 +1,16 @@
 import React from 'react';
 
+import SmallTitle from '../../common/SmallTitle/SmallTitle';
+import HtmlBox from '../../common/HtmlBox/HtmlBox';
+import cutText from '../../../utils/cutText/cutText';
+import './PostSummary.scss';
+
 const postSummary = props => (
-    <div>
-        <h2>{props.post.title}</h2>
-        <p>{props.post.author}</p>
-        <p>{props.post.content}</p>
-    </div>
+    <article className="post-summary">
+        <SmallTitle>{props.post.title}</SmallTitle>
+        <p>Author: {props.post.author}</p>
+        <HtmlBox>{cutText(props.post.content, 200)}</HtmlBox>
+    </article>
 );
 
 export default postSummary;
