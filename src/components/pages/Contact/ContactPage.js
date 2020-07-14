@@ -1,12 +1,14 @@
 import React from 'react';
 
+import PageTitle from '../../common/PageTitle/PageTitle';
+
 const ContactPage = () => (
-    <div className="contact-container">
-        <h1 className="contact-title">Contact</h1>
-        <p className="contact-par1">Contact me any time</p>
-        <p>4293 Long Street</p>
-        <p>San Diego</p>
-        <p className="contact-par1">Mobile Number: 385-293-322</p>
+    <div>
+        <PageTitle>Contact</PageTitle>
+        <p><b>Contact me any time</b></p>
+        <p><i>4293 Long Street</i></p>
+        <p><i>San Diego</i></p>
+        <p><b>Mobile Number: 385-293-322</b></p>
     </div>
 );
 
