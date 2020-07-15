@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './PageContainer.css';
+import './PageContainer.scss';
 
 const PageContainer = ({ children }) => (
     <div className="container-fluid">
