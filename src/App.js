@@ -21,17 +21,6 @@ class App extends Component {
           <Route component={NotFound} />
         </Switch>
       </MainLayout>
-      // <Router>
-      //     <NavBar />
-      //     <br />
-      //   <Switch>
-      //     <Route path="/" exact component={Home} />
-      //     <Route path="/add-post" exact component={AddPost} />
-      //     <Route path="/posts" exact component={PostsPage} />
-      //     <Route path="/contact" exact component={Contact} />
-      //     <Route component={NotFound} />
-      //   </Switch>
-      // </Router>
     );
   }
 }
